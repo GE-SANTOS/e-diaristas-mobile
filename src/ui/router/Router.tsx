@@ -12,7 +12,7 @@ const Stack = createStackNavigator();
 export type RootStackParamList = {
     Index: undefined;
     EncontrarDiaristas: undefined;
-}
+};
 
 const Router: React.FC = () => {
     return ( <NavigationContainer theme= {NavigationTheme}>
@@ -21,19 +21,26 @@ const Router: React.FC = () => {
             <Stack.Screen name={ 'Index' } component={ Index }
                 options={ {
                     headerTitleAlign: 'center',
-                    headerTitle: () => <Image style={ {
+                    headerTitle: () => (
+                        <Image style={ {
                         width: 150,
                         height: 50,
                         resizeMode:'contain',
-                    }} source={Logo} />
-                } }/>
+                    } }
+                        source={ Logo }
+                        />
+                    ),
+                }
+            }
+            />
             <Stack.Screen
                 name={ 'EncontrarDiaristas' }
                 component={ EncontrarDiaristas }
                 options={ {
                     title:'Encontrar Diaristas',
-                }}
-            />
+                }
+            }
+      />
         </Stack.Navigator>
     </NavigationContainer>
 

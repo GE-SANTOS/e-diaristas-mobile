@@ -1,4 +1,4 @@
-import React, { Children } from 'react';
+import React from 'react';
 import AppTheme from './app-themes';
 import { Provider as PaperProvider } from 'react-native-paper'
 import { ThemeProvider as EmotionProvider } from '@emotion/react';
